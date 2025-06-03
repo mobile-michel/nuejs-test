@@ -1,21 +1,17 @@
 {
-  "name": "my-nuejs-site",
+  "name": "nuejs-test",
   "version": "1.0.0",
-  "description": "Static website built with Nue.js",
   "main": "index.js",
   "scripts": {
-    "dev": "nue --port 8080",
-    "build": "nue build",
-    "preview": "nue serve",
-    "clean": "rm -rf .dist"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["nuejs", "static-site", "netlify"],
-  "author": "Your Name",
-  "license": "MIT",
-  "devDependencies": {
-    "nuejs": "^1.0.0"
-  },
-  "engines": {
-    "node": ">=18.0.0"
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "esbuild": "^0.25.5",
+    "lightningcss": "^1.30.1",
+    "nuekit": "^1.0.0-RC.4"
   }
 }
