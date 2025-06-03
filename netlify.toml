@@ -1,49 +1,19 @@
-# netlify.toml
-
-# Build settings
 [build]
-  # This command tells Netlify how to build your NueJS site.
-  # Using the direct path to the executable in node_modules/.bin
-  # can resolve issues where npx might not find the command.
-  # Make sure 'nuekit' or the relevant NueJS CLI package is in your package.json.
-  command = "node_modules/.bin/nue build -p"
+  publish = "dist"
+  command = "npm run build"
 
-  # This is the directory where NueJS outputs the built static files (HTML, CSS, JS, images, etc.).
-  # NueJS typically outputs to a 'dist', 'public', or 'www' directory by default.
-  # Check your NueJS project configuration or documentation for the correct directory.
-  publish = "dist" # Or "public", "www", etc.
+[build.environment]
+  NODE_VERSION = "18"
 
-  # Optional: Specify the Node.js version if your NueJS build process requires a specific one.
-  # [build.environment]
-  #   NODE_VERSION = "18" # Or your desired Node.js version
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
 
-# Optional: Redirects and rewrites
-# You can define server-side redirects or rewrites here if needed.
-# For example, for a Single Page Application (SPA) to handle client-side routing:
+# Optional: Custom redirects
 # [[redirects]]
-#   from = "/*"
-#   to = "/index.html"
-#   status = 200
-
-# Optional: Headers
-# You can define custom HTTP headers for your site.
-# [[headers]]
-#   for = "/*"
-#   [headers.values]
-#     X-Frame-Options = "DENY"
-#     X-XSS-Protection = "1; mode=block"
-#     Content-Security-Policy = "default-src 'self'; img-src 'self' https:; script-src 'self'; style-src 'self' 'unsafe-inline';"
-#     Referrer-Policy = "strict-origin-when-cross-origin"
-#     Permissions-Policy = "geolocation=(), microphone=()"
-
-# More complex build configurations or context-specific settings can also be added.
-# For example, different settings for production vs. deploy previews:
-# [context.production]
-#   command = "node_modules/.bin/nue build --production" # Example of a production-specific build command
-#   publish = "dist"
-#
-# [context.deploy-preview]
-#   command = "node_modules/.bin/nue build --preview"
-#   publish = "dist"
-
-# Always refer to the latest Netlify and NueJS documentation for the most up-to-date configurations.
+#   from = "/old-page"
+#   to = "/new-page"
+#   status = 301

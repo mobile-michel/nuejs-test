@@ -1,24 +1,21 @@
 {
-  "name": "nuejs-test",
+  "name": "my-nuejs-site",
   "version": "1.0.0",
+  "description": "Static website built with Nue.js",
   "main": "index.js",
   "scripts": {
-    "start": "nue --serve",
-    "build": "nue --build -p"
+    "dev": "nue --port 8080",
+    "build": "nue build",
+    "preview": "nue serve",
+    "clean": "rm -rf .dist"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://mobile-michel@github.com/mobile-michel/nuejs-test.git"
+  "keywords": ["nuejs", "static-site", "netlify"],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "nuejs": "^1.0.0"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",,
-  "dependencies": {
-    "nuekit": "^1.0.0-RC.4"
-  },
-  "bugs": {
-    "url": "https://github.com/mobile-michel/nuejs-test/issues"
-  },
-  "homepage": "https://github.com/mobile-michel/nuejs-test#readme",
-  "description": ""
+  "engines": {
+    "node": ">=18.0.0"
+  }
 }
