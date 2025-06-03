@@ -3,9 +3,10 @@
 # Build settings
 [build]
   # This command tells Netlify how to build your NueJS site.
-  # 'nue build' is a common command, but it might vary based on your project setup or NueJS version.
-  # Refer to the NueJS documentation for the exact build command.
-  command = "npx nue build"
+  # Using the direct path to the executable in node_modules/.bin
+  # can resolve issues where npx might not find the command.
+  # Make sure 'nuekit' or the relevant NueJS CLI package is in your package.json.
+  command = "node_modules/.bin/nue build -p"
 
   # This is the directory where NueJS outputs the built static files (HTML, CSS, JS, images, etc.).
   # NueJS typically outputs to a 'dist', 'public', or 'www' directory by default.
@@ -38,11 +39,11 @@
 # More complex build configurations or context-specific settings can also be added.
 # For example, different settings for production vs. deploy previews:
 # [context.production]
-#   command = "nue build --production" # Example of a production-specific build command
+#   command = "node_modules/.bin/nue build --production" # Example of a production-specific build command
 #   publish = "dist"
 #
 # [context.deploy-preview]
-#   command = "nue build --preview"
+#   command = "node_modules/.bin/nue build --preview"
 #   publish = "dist"
 
 # Always refer to the latest Netlify and NueJS documentation for the most up-to-date configurations.
