@@ -1,0 +1,20 @@
+{
+  "name": "nuejs-test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://mobile-michel@github.com/mobile-michel/nuejs-test.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mobile-michel/nuejs-test/issues"
+  },
+  "homepage": "https://github.com/mobile-michel/nuejs-test#readme",
+  "description": ""
+}
