@@ -5,7 +5,7 @@
   # This command tells Netlify how to build your NueJS site.
   # 'nue build' is a common command, but it might vary based on your project setup or NueJS version.
   # Refer to the NueJS documentation for the exact build command.
-  command = "nue build"
+  command = "npx nue build"
 
   # This is the directory where NueJS outputs the built static files (HTML, CSS, JS, images, etc.).
   # NueJS typically outputs to a 'dist', 'public', or 'www' directory by default.
